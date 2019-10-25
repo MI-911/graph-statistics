@@ -1,6 +1,7 @@
 {
  "database": "DBPedia",
  "query_selection": "MATCH (h:MovieRelated)-[r]->(t:MovieRelated)",
+ "directed": true,
  "n_nodes": 20531,
  "n_edges": 124831,
  "density": 0.0002961579513502481,
