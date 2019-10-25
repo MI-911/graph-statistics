@@ -65,6 +65,7 @@ if __name__ == "__main__":
         json.dump({
             'database' : 'DBPedia',
             'query_selection' : 'MATCH (h:MovieRelated)-[r]->(t:MovieRelated)',
+            'directed' : True,
             'n_nodes' : len(KG.nodes()),
             'n_edges' : len(KG.edges()),
             'density' : nx.density(KG),
