@@ -1,0 +1,60 @@
+{
+ "database": "DBPedia",
+ "query_selection": "MATCH (h:MovieRelated)-[r]->(t:MovieRelated)",
+ "directed": true,
+ "n_nodes": 20531,
+ "n_edges": 124831,
+ "density": 0.0002961579513502481,
+ "node_degrees": {
+  "min": 1,
+  "max": 3510,
+  "avg": 12,
+  "median": 4
+ },
+ "components": {
+  "weakly_connected_components": {
+   "n_components": 1,
+   "largest": {
+    "n_nodes": 20531,
+    "n_edges": 124831,
+    "diameter": [
+     "Found infinite path length because the digraph is not strongly connected"
+    ]
+   },
+   "average": {
+    "n_nodes": 20531,
+    "n_edges": 124831,
+    "diameter": [
+     "Found infinite path length because the digraph is not strongly connected"
+    ]
+   },
+   "smallest": {
+    "n_nodes": 20531,
+    "n_edges": 124831,
+    "diameter": [
+     "Found infinite path length because the digraph is not strongly connected"
+    ]
+   }
+  },
+  "strongly_connected_components": {
+   "n_components": 19577,
+   "largest": {
+    "n_nodes": 54,
+    "n_edges": 107,
+    "diameter": [
+     "Found infinite path length because the digraph is not strongly connected"
+    ]
+   },
+   "average": {
+    "n_nodes": 1,
+    "n_edges": 0,
+    "diameter": 0
+   },
+   "smallest": {
+    "n_nodes": 1,
+    "n_edges": 0,
+    "diameter": 0
+   }
+  }
+ }
+}
