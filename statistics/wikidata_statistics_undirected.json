@@ -1,0 +1,39 @@
+{
+ "database": "Wikidata",
+ "directed": false,
+ "n_nodes": 92563,
+ "n_edges": 337895,
+ "density": 7.887540628517058e-05,
+ "node_degrees": {
+  "min": 1,
+  "max": 10538,
+  "avg": 7,
+  "median": 3
+ },
+ "components": {
+  "connected_components": {
+   "n_components": 10,
+   "largest": {
+    "n_nodes": 92542,
+    "n_edges": 337883,
+    "diameter": [
+     "Found infinite path length because the digraph is not strongly connected"
+    ]
+   },
+   "average": {
+    "n_nodes": 3,
+    "n_edges": 2,
+    "diameter": [
+     "Found infinite path length because the digraph is not strongly connected"
+    ]
+   },
+   "smallest": {
+    "n_nodes": 2,
+    "n_edges": 1,
+    "diameter": [
+     "Found infinite path length because the digraph is not strongly connected"
+    ]
+   }
+  }
+ }
+}

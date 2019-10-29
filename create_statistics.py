@@ -6,6 +6,8 @@ import json
 
 DATA_BASE = 'data'
 STATS_BASE = 'statistics'
+GRAPH = 'Wikidata'
+TRIPLES = join(DATA_BASE, 'wikidata_triples.csv')
 
 def load_csv(from_file=None): 
     with open(from_file) as fp: 
@@ -81,8 +83,7 @@ def get_statistics(KG):
         connected_components = list(nx.connected_components(KG))
     
     return {
-        'database' : 'DBPedia',
-        'query_selection' : 'MATCH (h:MovieRelated)-[r]->(t:MovieRelated)',
+        'database' : GRAPH,
         'directed' : isinstance(KG, nx.DiGraph),
         'n_nodes' : len(KG.nodes()),
         'n_edges' : len(KG.edges()),
@@ -103,11 +104,11 @@ def get_statistics(KG):
 
 
 if __name__ == "__main__": 
-    triples_raw = load_csv(join(DATA_BASE, 'dbpedia_triples.csv'))
+    triples_raw = load_csv(TRIPLES)
 
     for directed in [True, False]: 
         KG = build_graph(triples_raw, directed=directed)
-        with open(join(STATS_BASE, f'dbpedia_statistics_{"directed" if directed else "undirected"}.json'), 'w') as fp: 
+        with open(join(STATS_BASE, f'{GRAPH.lower()}_statistics_{"directed" if directed else "undirected"}.json'), 'w') as fp: 
             json.dump(get_statistics(KG), fp, indent=True)
     
 
